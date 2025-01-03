@@ -30,27 +30,27 @@ export default function Nav(){
 
 	return(
 		<nav id="nav" class={`container-fluid sz-14 sticky-top p-4 py-3 py-md-3 ${path === "/" ? animateClass : "color-bg-white color-black shadow-sm" } ease`} style={{zIndex:'20'}} >
-        <div class="row align-items-center">
+        <div class="row align-items-center ">
           <div class="col col-md-4 p-2 sz-16 bold">
           <div class="row align-items-center">
           <div class="col-1 col-md-1  p-0">
-            <img src="/logo.svg" class="img-fluid" style={{height:'25px',width:'auto'}}/> </div>
+            <img src="/photo.JPG" class="img-fluid" style={{height:'25px',width:'auto'}}/> </div>
             <div class="col p-1">Connexus</div>
           </div>
           </div>
-          <div class="col font-poppins p-4 right display-sm-none"> 
+          <div class="col font-poppins p-4 right display-sm-none bold"> 
             <Link href="/membership" class="no-decoration"> Home </Link> 
           </div>
-          <div class="col font-poppins p-4 right display-sm-none">
+          <div class="col font-poppins p-4 right display-sm-none bold">
             <Link href="/job" class="no-decoration">Service</Link>
           </div>
-          <div class="col font-poppins p-4 right display-sm-none">
+          <div class="col font-poppins p-4 right display-sm-none bold">
             About
           </div>
-          <div class="col font-poppins p-4 right display-sm-none">
+          <div class="col font-poppins p-4 right display-sm-none bold">
             FAQ
           </div>
-          <div class="col col-md-4 font-poppins p-4 right display-sm-none color-black">
+          <div class="col col-md-4 font-poppins p-4 right display-sm-none color-black ">
             <Link class="color-bg-s no-decoration p-3 px-md-4 rounded-5" href="/"> SignUp </Link>
           </div>
           <div class="col-2 d-md-none right sz-20">

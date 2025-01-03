@@ -1,6 +1,7 @@
 :root {
---primary-color:purple;
---secondary-color:green;
+--primary-color:#211032;
+--secondary-color:#FFC857;
+--tertiary-color:#6B4F9B;
 }
 
 @media (prefers-color-scheme: dark) {

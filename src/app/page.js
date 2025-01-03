@@ -24,26 +24,19 @@ export default function Home() {
               <div class="sz-16 sz-md-20 col-12 pt-3">
                 Connecting talent with opportunity through blockchain transparency, fair payment, and direct engagement
               </div>
-              <div class="col-12 pt-4 color-white">
+              <div class="col-12 pt-4 color-black">
                 <div class="row">
-                <Link class="button color-bg-s color-white rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration center" ef="https://chat.whatsapp.com/BiQWwZnBTgwFaAbLmhiF43" href="/account/signup">
+                <Link class="button color-bg-s color-black rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration center " href="/account/signup">
                   Get Started
                 </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md col-sm-12 center display-sm-noe d-none d-md-block center" style={{marginTop:'-50px'}}>
+          <div class="col-md col-sm-12 center display-sm-noe center" style={{marginTop:'-50px'}}>
             <div class="row">
               <div class="col">
-                <img id="logo" class="img-fluid cover col-10" src="/hero.png"  style={{height:'450px',width:'auto'}} ></img>
-              </div> 
-            </div>
-          </div>
-          <div class="col-md col-sm-12 center display-md-none d-md-none mt-3">
-            <div class="row" >
-              <div class="col p-2" >
-                <img class="img-fluid cover p-2" src="/hero.png"  style={{height:'350px',width:'auto'}} ></img>
+                <img id="logo" class="img-fluid cover col-10" src="/hero.svg"  style={{height:'450px',width:'auto'}} />
               </div> 
             </div>
           </div>
