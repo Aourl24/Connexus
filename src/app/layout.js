@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
 
 function Footer(){
   return(
-     <footer class="text-center text-black" >
+     <footer class="text-center text-black container-fluid p-2" >
     <div class="container">
       <section class="mt-5">
         <div class="row text-center d-flex justify-content-center pt-5">
@@ -46,7 +46,7 @@ function Footer(){
 
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="no-decoration color-p">Awards</a>
+              <a href="#!" class="no-decoration color-p">Products</a>
             </h6>
           </div>
            <div class="col-md-2">
@@ -59,24 +59,8 @@ function Footer(){
               <a href="#!" class="no-decoration color-p">Contact</a>
             </h6>
           </div>
-          
-        </div>
-        
-      </section>
-      
 
-      <section class="my-4 my-md-5 border-top pt-4">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8 sz-20">
-            <p>
-              Python Nigeria
-            </p>
-          </div>
-        </div>
-      </section>
-      
-
-      <section class="text-center mb-3">
+        <div class="col-md-2">
         <a href="" class=" me-4 color-p">
           <i class="fab fa-facebook-f"></i>
         </a>
@@ -95,12 +79,17 @@ function Footer(){
         <a href="" class=" me-4 color-p">
           <i class="fab fa-github"></i>
         </a>
+        </div>
+          
+        </div>
+        
       </section>
+      
+      
       </div>
-    <div class="text-center">
+    <div class="text-center py-4">
       © 2024 Copyright
-      <a class="color-s no-decoration mx-2" href="https://pynigeria.vercel.app/"
-         >Python-Nigeria.com</a
+      <a class="color-s no-decoration mx-2" href="">Connexus.com</a
         >
     </div>
   </footer>

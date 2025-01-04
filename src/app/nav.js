@@ -2,34 +2,19 @@
 import React from "react";
 import { useRouter ,useSearchParams,usePathname } from 'next/navigation'
 import Link from "next/link"
+import {OnScroll} from "./Aanimate.js"
 
 export default function Nav(){
 	const path = usePathname()
 	const excludedPath= ["/account/signup"]
-	const [isScrolled,setIsScrolled]= React.useState(false)
 	const [dropdown , showDrop] = React.useState(false)
-	const animateClass = `${isScrolled ? "color-bg-white color-black shadow-sm" : "color-bg-white color-black"}`
-
-	React.useEffect(()=>{
-		const handleScroll = () =>{
-			if (window.scrollY > 50){
-				setIsScrolled(true);
-			}
-			else{
-				setIsScrolled(false)
-			}
-		}
-		window.addEventListener('scroll',handleScroll,{passive:true})
-
-		return ()=> window.removeEventListener('scroll',handleScroll)
-	},[])
 
 	if(excludedPath.includes(path)){
 		return(<></>)
 	}
 
 	return(
-		<nav id="nav" class={`container-fluid sz-14 sticky-top p-4 py-3 py-md-3 ${path === "/" ? animateClass : "color-bg-white color-black shadow-sm" } ease`} style={{zIndex:'20'}} >
+		<OnScroll id="nav" className="container-fluid container-fluid sz-14 fixed-top p-4 py-3 py-md-3 ease" initial="color-bg-white color-black" animation="color-bg-p color-white shadow-sm" y={500} >
         <div class="row align-items-center ">
           <div class="col col-md-4 p-2 sz-16 bold">
           <div class="row align-items-center">
@@ -54,11 +39,11 @@ export default function Nav(){
             <Link class="color-bg-s no-decoration p-3 px-md-4 rounded-5" href="/"> SignUp </Link>
           </div>
           <div class="col-2 d-md-none right sz-20">
-          	{!dropdown && <span onClick={()=>showDrop(true)}> <i class="fas fa-ellipsis-v font-montserrat-bold color-p"></i><i class="fas fa-ellipsis-v font-montserrat-bold color-p"></i><i class="fas fa-ellipsis-v font-montserrat-bold color-p"></i> </span>}
+          	{!dropdown && <span onClick={()=>showDrop(true)}> <i class="fas fa-bars"></i></span>}
           </div>
         </div>
         {dropdown && <Dropdown close={()=>showDrop(false)} /> }
-        </nav>
+        </OnScroll>
 		)
 }
 

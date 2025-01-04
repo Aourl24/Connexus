@@ -3,9 +3,11 @@ import React from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
-
+import {OnView , Typing} from "./Aanimate.js"
 
 export default function Home() {
+
+  const words =[{title:"Direct Payments"}]
 
   React.useEffect(()=>{
     // animate("#hero",{opacity:0.5})
@@ -13,52 +15,63 @@ export default function Home() {
 
   return (
     <div class="sz-14">        
-      <section id="hero" class="container-fluid mmd-2 rounded-4 color-bg-p d-flex py-1 my-md-0 vh-100 justify-content-md-center align-items-md-center flex-column" animate={{scale:1}}>
-        <div class="row pt-4 pt-md-0 ">
-          <div class="col-md col-sm-12 color-white sz-30  sz-md-48">
+      <div class="vh-md-100 background ">
+      <section id="hero" class="container-fluid d-flex py-1 my-md-0 vh-md-100 justify-content-md-center align-items-md-center flex-column vh-100 justify-content-center" animate={{scale:1}} style={{backgroundColor:"rgba(33,16,50,0.95)"}}>
+      <OnView animation='animate__animated animate__fadeIn ' initial='invisible'>
+        <div class="row">
+          <div class="col-md col-sm-12 color-white sz-30  sz-md-48 center">
             <div class="row borde p-3 px-md-5 mx-md-5">
               <div class="col-12" >
-                 <b class="font-montserrat-bold sz-xd sz-36 sz-md-48 "> Unlock Your web3 career
- </b>
+                 <b class="font-montserrat-bold sz-xd sz-48 sz-md-48 " style={{fontSize:"43px"}}>
+                 Unlock Your <br class="d-block d-md-none display-md-none"/> Web3 Career 
+ </b>             <hr class="d-block d-md-none display-md-none" />
               </div>
-              <div class="sz-16 sz-md-20 col-12 pt-3">
+              <div class="sz-18 sz-md-30 col-12 pt-3">
                 Connecting talent with opportunity through blockchain transparency, fair payment, and direct engagement
               </div>
               <div class="col-12 pt-4 color-black">
                 <div class="row">
-                <Link class="button color-bg-s color-black rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration center " href="/account/signup">
+                <div class="col">
+                <a class="color-bg-s color-black rounded-5 sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration my-3 p-3 p-md-4 col-md-3 col-8 inline-block" href="/account/signup">
                   Get Started
-                </Link>
+                </a>
+                </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md col-sm-12 center display-sm-noe center" style={{marginTop:'-50px'}}>
-            <div class="row">
-              <div class="col">
-                <img id="logo" class="img-fluid cover col-10" src="/hero.svg"  style={{height:'450px',width:'auto'}} />
-              </div> 
-            </div>
-          </div>
+        
+        <div class="row color-white justify-content-center center mt-4">
+        <div class="col">
+        <p class="sz-18 color-s pb-3">-- Get whitelist for early access --</p>
+          <input type="input" placeholder="Enter Email"  class="sz-18 border p-3 rounded-5 no-border col-md-8 col-12 color-bg-white color-black" />
+          <button class="position-absolute color-bg-p color-white rounded-5 no-border p-3 col-md-2 early-button">Early Access </button>
+          <div> </div>
         </div>
+        </div>
+        </div>
+        </OnView>
       </section>
+      </div>
 <br />
-<section id="service" class="small_pb small_pt">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-            <div class="title_default_light title_border text-center">
+
+<section class="container-fluid  color-bg-white vh-md-100 p-3 ">
+<OnView animation="animate__animated animate__slideInUp aniate__delay-1s" initial="invisible">
+<div class="row align-items-center  justify-content-center vh-md-100">
+<div class="col-md-5 col-sm center p-3 order-last order-md-first">
+<img src="/photo.jpg" class="img-fluid rounded-3" />
+
+</div>
+<div class="col center">
+<div class="row align-items-cente justify-content-center">
+          <div class="col-lg-8 col-md-12 col-sm-12 offet-lg-2">
               <h4
-                class="animation sz-24"
-                data-animation="fadeInUp"
-                data-animation-delay="0.2s"
+                class="sz-md-30 my-3 mb-5 color-p font-montserrat-bold sz-28"
               >
                 Meet our solution for you
               </h4>
               <p
-                class="animation"
-                data-animation="fadeInUp"
-                data-animation-delay="0.4s"
+                class=" sz-18 color-black"
               >
                 CONNEXUS is transforming the hiring landscape by leveraging
                 blockchain technology to create a transparent, secure, and
@@ -66,101 +79,93 @@ export default function Home() {
                 payments, and geographic limitations. our decentralized platform
                 empowers employers and job seekers to connect directly, with
                 payments secured by smart contracts. Designed for tech,
-                creative, and blockchain professionals, GETHIRED ensures fair,
+                creative, and blockchain professionals, CONNEXUS ensures fair,
                 instant transactions and a global talent pool, backed by a
                 community-driven governance model that puts trust and
                 transparency first.
               </p>
             </div>
           </div>
-        </div>
-        <div class="row">
+
+</div>
+</div>
+</OnView>
+</section>
+<br />
+<section id="service" class="colo-bg-s vh-md-100 p-3 pt-5">
+      <div class="container">
+        <div class="row gy-3">
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <div
-              class="box_wrap text-center animation"
-              data-animation="fadeInUp"
-              data-animation-delay="0.6s"
-            >
-              <i class="fas fa-user sz-24"></i>
-              <h4>Direct Payments</h4>
+            <OnView animation='animate__animated animate__fadeIn ' initial='invisible'className="box_wrap  rounded-3 color-bg-s p-3 py-md-4">
+            <i class="fas fa-money-bill sz-36 p-3 color-p py-4"></i>
+              <h4 class="sz-md-20 pb-2 bold sz-20">Direct Payments</h4>
               <p>
-                GETHIRED leverages smart contracts to guarantee freelancers
+                CONNEXUS leverages smart contracts to guarantee freelancers
                 receive payments instantly once work is completed successfully,
                 eliminating delays and ensuring reliable compensation.
               </p>
-            </div>
+            </OnView>
           </div>
+
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <div
-              class="box_wrap text-center animation"
-              data-animation="fadeInUp"
-              data-animation-delay="0.8s"
-            >
-              <i class="fas fa-user sz-24"></i>
-              <h4>Transparent Hiring</h4>
+          <OnView animation='animate__animated animate__fadeIn ' initial='invisible'className="box_wrap  rounded-3 color-bg-s p-3 py-md-4">
+              <i class="fas fa-eye sz-36 p-3 color-p py-4"></i>
+              <h4 class="sz-md-20 pb-2 bold sz-20">Transparent Hiring</h4>
               <p>
                 Transparent Hiring: Every interaction is securely recorded on
                 the blockchain, ensuring full transparency and reducing disputes
                 over job deliverables, making the hiring process fairer for
                 everyone.
               </p>
-            </div>
+            </OnView>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div
-              class="box_wrap text-center animation"
-              data-animation="fadeInUp"
-              data-animation-delay="1s"
+              class="box_wrap  rounded-3 color-bg-s p-3 py-md-4"
             >
-             <i class="fas fa-user sz-24"></i>
-            <h4>Low Fees</h4>
+             <i class="fas fa-percent sz-36 p-3 color-p py-4"></i>
+            <h4 class="sz-md-20 pb-2 bold sz-20">Low Fees</h4>
               <p>
-                By eliminating intermediaries, GETHIRED lowers transaction fees
+                By eliminating intermediaries, CONNEXUS lowers transaction fees
                 for employers and freelancers, enabling collaboration that saves
-                employers money and helps freelancers keep more earnings
+                employers money and helps freelancers keep more earnings,
               </p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-md-4">
             <div
-              class="box_wrap text-center animation"
-              data-animation="fadeInUp"
-              data-animation-delay="1s"
+              class="box_wrap  rounded-3 color-bg-s p-3 py-md-4"
             >
-              <i class="fas fa-user sz-24"></i>
-              <h4>Global Accessibility</h4>
+             <i class="fas fa-bolt sz-36 p-3 color-p py-4"></i>
+            <h4 class="sz-md-20 pb-2 bold sz-20">Global Accessibility</h4>
               <p>
-                With cryptocurrency-powered transactions, GETHIRED breaks down
+                With cryptocurrency-powered transactions, CONNEXUS breaks down
                 geographical barriers, allowing businesses to easily hire talent
                 worldwide without payment restrictions.
               </p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-md-4">
             <div
-              class="box_wrap text-center animation"
-              data-animation="fadeInUp"
-              data-animation-delay="1s"
+              class="box_wrap  rounded-3 color-bg-s p-3 py-md-4"
             >
-              <i class="fas fa-user sz-24"></i>
-                <h4>Fast Payments</h4>
+             <i class="fas fa-bolt sz-36 p-3 color-p py-4"></i>
+            <h4 class="sz-md-20 pb-2 bold sz-20">Fast Payments</h4>
               <p>
-                With GETHIRED’s streamlined blockchain transactions, freelancers
+                With CONNEXUS’s streamlined blockchain transactions, freelancers
                 enjoy immediate payment upon task completion, eliminating delays
                 and ensuring efficient compensation.
               </p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-md-4">
             <div
-              class="box_wrap text-center animation"
-              data-animation="fadeInUp"
-              data-animation-delay="1s"
+              class="box_wrap  rounded-3 color-bg-s p-3 py-md-4"
             >
-              <i class="fas fa-user sz-24"></i>
-              <h4>Community-Driven</h4>
+             <i class="fas fa-hands-helping sz-36 p-3 color-p py-4"></i>
+            <h4 class="sz-md-20 pb-2 bold sz-20">Community-Driven</h4>
               <p>
-                At GETHIRED, we believe in community. Our decentralized
+                At CONNEXUS, we believe in community. Our decentralized
                 governance model empowers users to participate in
                 decision-making, fostering collaboration where everyone’s voice
                 is valued.
@@ -169,65 +174,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </section>        
+    </section>   
 
-        <section class="container-fluid d-flex align-items-center p-4 p-md-5 color-black vh-md-100 flex-column">
+    <section class="container-fluid d-flex justify-content-center align-items-center p-4 p-md-5 color-white vh-md-100 vh-100 flex-column color-bg-p">
+         <div class="row">
+         <div class="col-12 col-md"><img src="/hero.jpeg" class="img-fluid" /> </div>
+
+         <div class="col order-md-first">
           <div class="row my-4">
-            <div class="col sz-30 color-p sz-md-36 center font-montserrat-bold"> <span class="border-5"> About Our Community </span> </div>
+            <div class="col sz-30 color-s sz-md-36 center font-montserrat-bold"> <span class="border-5"> Why Join us Now? </span> </div>
           </div>
 
           <div class="row sz-16 sz-md-18 mb-5">
           <div class="col center">
-            <p>Our Python community is a vibrant group of developers and enthusiasts  dedicated to exploring the latest in Python programming language Whether you are an expert or a newbie, you will find a supportive environment to grow and collaborate</p>
-            <p> Our Vision is to empower Python developers to connect , grow and make a meaningful impact in tech </p>
-            <p> 
-              <div> Our Core Values are ;  Collaboration: together we solve problems and create Opportunies .
-               Inclusivity : A welcoming space for all skill levels ,
-               Innovation : Pushing boundaries with Python ,
-               Growth : Supporting personal and professional development </div>
-            </p>
+            <p>Joining Our community today gives you exclusive access to premium features designed to elevate your freelancing experience. be the first to explore tools and resources that will help you stand out and succed once we launch</p>
+            <p> Don't miss out on these valuable benefits. Sign up now with your email to secure your spot and gain early access to our premium features </p>
           </div>
           </div>
-          
-          <div class="row justify-content-center m-2 mb-3">
-            <div class="col-md-3 col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Web Development </div>
-            <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Data Science & Analysis </div>
-            <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Machine Learning </div>
-            <div class="col-md-3  col-sm-2 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Job Updates </div>
-            <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Learning </div>
+          </div>
           </div>
 
-        </section>
-
-        
-
-        <section class='container-fluid d-flex justify-content-center align-items-center vh-100 flex-column background color-white'>
-        
-        
-        <div class="row mb-4">
-            <img src="/logo.svg" class="img-fluid rounded color-bg-white p-3" />
-        </div>
-
-        <div class="row">
-          <div class="col-12 center sz-24 sz-md-36 color-white">
-           Join us on various platforms
-          </div>
-        </div>
-
-
-          <div class="row center sz-18">
-            <div class="col-12 p-3">  Whatsapp <i class="fab fa-whatsapp p-2 color-p"></i> </div>
-            <div class="col-12 p-3">   Telegram <i class="fab fa-telegram p-2 color-p"></i> </div>
-            <div class="col-12 p-3">  Discord <i class="fab fa-discord p-2 color-p"></i> </div>
-          </div>
-
-          <div class="row mt-4 ">
-            <div class="col hide">
-              <Link class="button color-bg-p color-white rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration" href="https://chat.whatsapp.com/BiQWwZnBTgwFaAbLmhiF43">
-                  Join the Community
-                </Link>
-            </div>
-          </div>
         </section>
 
     </div>
